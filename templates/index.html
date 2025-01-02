@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Verificador de Mega-Sena</title>
+</head>
+<body>
+    <h1>Verificador de Jogos da Mega-Sena</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <h2>Arraste e solte ou faça upload do arquivo:</h2>
+        <input type="file" name="file" accept=".txt">
+        <button type="submit">Enviar Arquivo</button>
+    </form>
+    <form method="POST">
+        <h2>Digite seus jogos manualmente:</h2>
+        <textarea name="manual_entry" rows="4" cols="50" placeholder="Exemplo: 01,02,03,04,05,06;07,08,09,10,11,12"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
